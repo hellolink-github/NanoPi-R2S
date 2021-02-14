@@ -113,6 +113,17 @@ jobs:
           cd code/friendlywrt		
           ./scripts/feeds update -a		
           ./scripts/feeds install -a
+  
+      - name: Install upnp
+        run: |
+          rm -rf package/feeds/packages/miniupnpd
+          cd code/friendlywrt/package
+          git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/tree/master/miniupnpd
+ 
+      - name: Install chinadns-ng
+        run: | 
+          cd code/friendlywrt/package
+          git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/tree/master/chinadns-ng
 
       - name: Install Mods
         run: |
