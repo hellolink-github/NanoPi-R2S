@@ -115,10 +115,10 @@ jobs:
           ./scripts/feeds install -a
   
      
-      - name: Install chinadns-ng
-        run: | 
-          cd code/friendlywrt/package
-          git clone https://github.com/zfl9/chinadns-ng
+      #- name: Install chinadns-ng
+      #  run: | 
+      #    cd code/friendlywrt/package
+      #    git clone https://github.com/zfl9/chinadns-ng
        
       - name: Install Mods
         run: |
