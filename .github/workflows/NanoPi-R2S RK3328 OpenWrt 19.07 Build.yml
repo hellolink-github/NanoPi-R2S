@@ -114,24 +114,11 @@ jobs:
           ./scripts/feeds update -a		
           ./scripts/feeds install -a
   
-      - name: Install upnp
-        run: |
-          rm -rf package/feeds/packages/miniupnpd
-          cd code/friendlywrt/package
-          git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/tree/master/miniupnpd.git
- 
+     
       - name: Install chinadns-ng
         run: | 
           cd code/friendlywrt/package
-          git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/tree/master/chinadns-ng.git
-
-      - name: Install dnscrypt-proxy
-        run: |
-          rm -rf package/feeds/packages/dnscrypt-proxy
-          rm -rf package/feeds/packages/dnscrypt-proxy2
-          cd code/friendlywrt/package 
-          git clone https://github.com/xiaoqingfengATGH/feeds-xiaoqingfeng/tree/master/dnscrypt-proxy2.git     
-     
+          git clone https://github.com/zfl9/chinadns-ng
        
       - name: Install Mods
         run: |
